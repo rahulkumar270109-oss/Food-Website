@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Food Ordering</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Apna Pet Puja 😍</div>
+
+ <!-- Right controls -->
+  <div class="nav-right">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search food...">
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li>
+  <a href="cart.html" id="cart-icon">🛒 Cart</a>
+    </li>
+
+    <li><a href="#contact">Contact</a></li>
+    <span class="indicator"></span>
+  </ul>
+</nav>
+
+<section id="home" class="home-section">
+  <div class="home-content">
+    <h1 class="animate-text">Delicious Food,<br>Delivered Fast 🚀</h1>
+    <p class="animate-text delay-1">
+      Order your favourite meals anytime, anywhere
+    </p>
+
+    <div class="home-buttons animate-text delay-2">
+      <button class="order-btn" onclick="scrollToMenu()">Order Now</button>
+      <button class="menu-btn" onclick="scrollToMenu()">View Menu</button>
+    </div>
+  </div>
+
+  <div class="home-image animate-img">
+    <img src="image/home page.jpg" alt="Food">
+  </div>
+</section>
+
+<!--OFFER SECTION -->
+
+<section class="offer-section">
+  <h2 class="offer-title">🔥 Today’s Special Offers</h2>
+
+  <div class="offer-container">
+
+    <div class="offer-card">
+      <img src="image/pizza.png" alt="Pizza Offer">
+      <h3>Flat 30% OFF</h3>
+      <p>On all Pizza orders</p>
+      <button onclick="scrollToMenu()">Order Now</button>
+    </div>
+
+    <div class="offer-card">
+      <img src="image/burger.jpeg" alt="Burger Offer">
+      <h3>Buy 1 Get 1 Free</h3>
+      <p>On selected Burgers</p>
+      <button onclick="scrollToMenu()">Order Now</button>
+    </div>
+
+    <div class="offer-card">
+      <img src="image/fr.webp" alt="Combo Offer">
+      <h3>₹199 Combo</h3>
+      <p>Burger + Fries + Coke</p>
+      <button onclick="scrollToMenu()">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!--REVIEW SECTION-->
+
+<section class="review-section">
+  <h2 class="review-title">⭐ What Our Customers Say</h2>
+
+  <div class="review-container">
+
+    <div class="review-card">
+      <img src="image/rahul image.jpeg" alt="User">
+      <h3>Rahul Sharma</h3>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>Food was amazing and delivery was super fast. Highly recommended!</p>
+    </div>
+
+    <div class="review-card">
+      <img src="image/anjali.jpeg" alt="User">
+      <h3>Anjali Singh</h3>
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p>Great taste and good quantity. Loved the pizza!</p>
+    </div>
+
+    <div class="review-card">
+      <img src="image/sunny-deol-759.jpg" alt="User">
+      <h3>Rohit Singh</h3>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>Best food ordering website. Smooth experience!</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Menu SEction -->
+
+<section id="menu" class="menu-section">
+  <h2 class="title">Our Menu</h2>
+
+  <div class="food-grid">
+
+   <div class="food-card">
+  <img src="image/pizza.png" class="food-img">
+  <h3 class="food-name">Cheese Pizza</h3>
+  <p class="price">₹299</p>
+  <button class="add-btn"
+    data-name="Cheese Pizza"
+    data-price="299">Add to Cart</button>
+</div>
+
+
+    <div class="food-card">
+  <img src="image/burger.jpeg" class="food-img">
+  <h3 class="food-name">Veg Burger</h3>
+  <p class="price">₹199</p>
+  <button class="add-btn"
+    data-name="Veg Burger"
+    data-price="199">Add to Cart</button>
+      </div>
+
+
+    <div class="food-card">
+  <img src="image/pasta.jpeg" class="food-img">
+  <h3 class="food-name"> WhiteCheese pasta</h3>
+  <p class="price">₹299</p>
+  <button class="add-btn"
+    data-name="WhiteCheese"
+    data-price="299">Add to Cart</button>
+</div>
+
+
+   <div class="food-card">
+  <img src="image/chomin.jpg" class="food-img">
+  <h3 class="food-name">Chowmin</h3>
+  <p class="price">₹199</p>
+  <button class="add-btn"
+    data-name="Chowmin"
+    data-price="199">Add to Cart</button>
+</div>
+
+    <div class="food-card">
+  <img src="image/litti c.avif" class="food-img">
+  <h3 class="food-name">litti</h3>
+  <p class="price">₹30</p>
+  <button class="add-btn"
+    data-name="litti"
+    data-price="30">Add to Cart</button>
+</div>
+
+    <div class="food-card">
+  <img src="image/cholea.jpeg" class="food-img">
+  <h3 class="food-name">Cholea B</h3>
+  <p class="price">₹149</p>
+  <button class="add-btn"
+    data-name="cholea B"
+    data-price="149">Add to Cart</button>
+</div>
+
+    <div class="food-card">
+  <img src="image/lassi.webp" class="food-img">
+  <h3 class="food-name">Lassii</h3>
+  <p class="price">₹99</p>
+  <button class="add-btn"
+    data-name="lassi"
+    data-price="99">Add to Cart</button>
+</div>
+
+   <div class="food-card">
+  <img src="image/dosa.jpeg" class="food-img">
+  <h3 class="food-name">Dosa</h3>
+  <p class="price">₹239</p>
+  <button class="add-btn"
+    data-name="Dosa"
+    data-price="239">Add to Cart</button>
+</div>
+
+  <div class="food-card">
+  <img src="image/manchurian.jpg" class="food-img">
+  <h3 class="food-name">manchurian</h3>
+  <p class="price">₹399</p>
+  <button class="add-btn"
+    data-name="manchurian"
+    data-price="399">Add to Cart</button>
+</div>
+
+  <div class="food-card">
+  <img src="image/donates.jpeg" class="food-img">
+  <h3 class="food-name">donates</h3>
+  <p class="price">₹99</p>
+  <button class="add-btn"
+    data-name="donates"
+    data-price="99">Add to Cart</button>
+</div>
+
+   <div class="food-card">
+  <img src="image/cocke.jpg" class="food-img">
+  <h3 class="food-name">Cocke</h3>
+  <p class="price">₹99</p>
+  <button class="add-btn"
+    data-name="Cocke"
+    data-price="99">Add to Cart</button>
+</div>
+   <div class="food-card">
+  <img src="image/fr.webp" class="food-img">
+  <h3 class="food-name">French Fries</h3>
+  <p class="price">₹199</p>
+  <button class="add-btn"
+    data-name="French Fries"
+    data-price="199">Add to Cart</button>
+</div>
+
+
+  </div>
+
+  
+
+</section>
+
+<!--COCTACT SECTION DETAIL-->
+
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">📞 Contact Us</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>Have questions or want to order? Reach out to us!</p>
+
+      <div class="info-box">
+        <span>📍</span>
+        <p>Apna Pet Puja, AMBER Road, BIHAR, India</p>
+      </div>
+
+      <div class="info-box">
+        <span>📞</span>
+        <p>+91 6203146013 </p>
+      </div>
+
+      <div class="info-box">
+        <span>✉️</span>
+        <p>rahulkumar1972d@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <h3>Send Message</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!--FOOTER SECTION-->
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <h3>Apna Pet Puja 😍</h3>
+    <p>Delicious food delivered to your doorstep</p>
+
+    <div class="social-icons">
+      <a href="#" class="social instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="social facebook" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <p class="copyright">
+      © Apna Pet Puja 😍. All rights reserved.
+    </p>
+
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
